@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Universal Version Control (UVC)</title>
+  <style>
+    :root {
+      --bg: #0c0e12;
+      --surface: #141820;
+      --border: #232936;
+      --text-main: #f0f3f8;
+      --text-muted: #94a3b8;
+      --accent: #3b82f6;
+      --code-bg: #1a202c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --border: #e2e8f0;
+        --text-main: #0f172a;
+        --text-muted: #64748b;
+        --accent: #2563eb;
+        --code-bg: #f1f5f9;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      color: var(--text-main);
+      font-size: 0.98rem;
+    }
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    code {
+      font-family: "JetBrains Mono", Consolas, Menlo, monospace;
+      font-size: 0.88em;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: var(--code-bg);
+      font-weight: 600;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .notice {
+      background: var(--code-bg);
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy for Universal Version Control (UVC)</h1>
+    <div class="meta">
+      <strong>Effective Date:</strong> November 10, 2026 &bull; 
+      <strong>Application Version:</strong> 0.1.x &bull; 
+      <strong>Contact:</strong> <a href="mailto:mail.shreyanshp@gmail.com">mail.shreyanshp@gmail.com</a>
+    </div>
+
+    <div class="notice">
+      <strong>Core Commitment:</strong> UVC is a <em>local-first</em> desktop application. Your files, documents, project code, and version history stay on your computer and are never uploaded to our servers or the cloud.
+    </div>
+
+    <h2>1. Overview</h2>
+    <p>Universal Version Control (&ldquo;UVC&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is a local-first desktop version control utility for Windows, developed by PRISM Laboratories / Opinionated Works. UVC does not operate a remote file storage service, cloud sync server, or user account registry.</p>
+
+    <h2>2. Information That Stays on Your Machine (Never Transmitted)</h2>
+    <p>The following categories of data are processed strictly on your local device and are <strong>never</strong> transmitted to our servers, third parties, or cloud services:</p>
+    <ul>
+      <li><strong>File Contents &amp; Code:</strong> Your files, documents, code, notes, images, or media tracked by UVC.</li>
+      <li><strong>Filenames &amp; Folder Paths:</strong> The filesystem names and paths of your monitored files (e.g., <code>C:\Users\...</code>).</li>
+      <li><strong>Project Names &amp; Settings:</strong> Logical project names, descriptions, source directory mappings, and exclusion rules.</li>
+      <li><strong>Version Manifests &amp; Hashes:</strong> BLAKE3 content hashes, snapshot manifests, and timeline metadata.</li>
+      <li><strong>SQLite Database:</strong> The local metadata database (<code>uvc.db</code>) located in <code>%APPDATA%\com.uvc.app</code>.</li>
+      <li><strong>Clipboard &amp; Keystrokes:</strong> UVC does not inspect or log your clipboard or keystrokes.</li>
+    </ul>
+
+    <h2>3. Diagnostic Telemetry &amp; Error Reporting</h2>
+    <p>To identify software crashes and diagnose unhandled exceptions, UVC includes an optional diagnostic reporting system powered by <strong>Sentry</strong> (Functional Software, Inc.).</p>
+
+    <h3>3.1. What Is Collected (When Enabled)</h3>
+    <ul>
+      <li><strong>Random Installation Identifier:</strong> A locally generated UUID (e.g. <code>83acdcbe-0ac3-45e6-89dd-ad54f5ff9fc5</code>) used solely to deduplicate crash reports across application restarts.</li>
+      <li><strong>Coarse Product Usage Counters:</strong> Aggregate action counts such as application launch, checkpoint creation count, and restore success/failure codes and elapsed duration in milliseconds.</li>
+      <li><strong>Application Crash Reports:</strong> Software error messages and stack traces generated when the application encounters an unexpected error.</li>
+      <li><strong>Environment Metadata:</strong> Application version (e.g. <code>uvc@0.1.0</code>), Windows OS release, and CPU architecture.</li>
+    </ul>
+
+    <h3>3.2. Automated Privacy Scrubbing</h3>
+    <p>Before any diagnostic event leaves your computer, UVC's Rust native engine and TypeScript client execute automatic sanitization:</p>
+    <ul>
+      <li>All Windows drive paths (<code>C:\...</code>, <code>D:/...</code>) and UNC network shares (<code>\\...</code>) are replaced with <code>[REDACTED_PATH]</code>.</li>
+      <li>All Unix-style paths (<code>/home/...</code>, <code>/Users/...</code>) are replaced with <code>[REDACTED_PATH]</code>.</li>
+      <li>All BLAKE3 hashes and 64-character hex strings are replaced with <code>[REDACTED_HASH]</code>.</li>
+      <li>All entity UUIDs are replaced with <code>[REDACTED_ID]</code>.</li>
+      <li>Client IP collection is explicitly disabled (<code>sendDefaultPii: false</code>) and stripped.</li>
+    </ul>
+
+    <h3>3.3. Default Setting &amp; User Control</h3>
+    <ul>
+      <li><strong>Fresh Installations:</strong> Diagnostic reporting defaults to ON on fresh installations to identify early release defects.</li>
+      <li><strong>Immediate Opt-Out:</strong> You can opt out immediately during first launch on the welcome screen, or at any time by toggling off <strong>Settings &gt; Error &amp; Diagnostic Reporting</strong>.</li>
+      <li><strong>Preserved Opt-Out:</strong> Once disabled, your choice is permanently stored in local SQLite settings and <code>localStorage</code>. It is never reset across updates.</li>
+      <li><strong>Queue Flush:</strong> Disabling reporting immediately purges all queued telemetry events and clears in-memory buffers.</li>
+    </ul>
+
+    <h2>4. Voluntary Online Communications</h2>
+    <h3>4.1. In-App Feedback (SnapItForms)</h3>
+    <p>If you choose to submit feedback through the in-app modal, the text you enter and your optional contact email are transmitted securely via SnapItForms (<code>api.snapitforms.com</code>) to our developer inbox. This form transmits only what you type into the dialog.</p>
+
+    <h3>4.2. Newsletter Subscription (FormSubmit)</h3>
+    <p>If you choose to subscribe to product updates on the welcome screen, your email address is submitted via FormSubmit (<code>formsubmit.co</code>) to our announcements list. You can unsubscribe at any time.</p>
+
+    <h2>5. Third-Party Service Providers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Data Processed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sentry</strong></td>
+          <td>Functional Software, Inc.</td>
+          <td>Crash diagnostics &amp; error reporting</td>
+          <td>Pseudonymous install UUID, scrubbed stack traces, coarse event counters</td>
+        </tr>
+        <tr>
+          <td><strong>SnapItForms</strong></td>
+          <td>SnapItForms</td>
+          <td>Voluntary user feedback</td>
+          <td>Typed user feedback message, optional reply email</td>
+        </tr>
+        <tr>
+          <td><strong>FormSubmit</strong></td>
+          <td>FormSubmit</td>
+          <td>Voluntary newsletter signup</td>
+          <td>User-entered email address</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. Data Storage &amp; Deletion</h2>
+    <p>You have full sovereignty over your local data. Deleting the directory <code>%APPDATA%\com.uvc.app</code> permanently removes all local version history, checkpoints, and SQLite databases from your machine. To request deletion of voluntary email communications or feedback, email us at <a href="mailto:mail.shreyanshp@gmail.com">mail.shreyanshp@gmail.com</a>.</p>
+
+    <h2>7. Contact</h2>
+    <p>For questions or privacy requests, please contact:<br>
+    <strong>Email:</strong> <a href="mailto:mail.shreyanshp@gmail.com">mail.shreyanshp@gmail.com</a><br>
+    <strong>GitHub:</strong> <a href="https://github.com/mailshreyanshp/UVC">https://github.com/mailshreyanshp/UVC</a></p>
+  </div>
+</body>
+</html>
